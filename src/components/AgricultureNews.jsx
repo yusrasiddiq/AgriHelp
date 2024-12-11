@@ -1,10 +1,8 @@
-// src/components/AgricultureNews.js
 import React, { useState, useEffect } from "react";
 
 const AgricultureNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const apiKey = "1adce1c892844c078ebde9b4c4c89dcf"; // Replace with your NewsAPI key
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -27,12 +25,12 @@ const AgricultureNews = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-green-300 to-blue-500 pl-56 pt-6">
+    <div className="min-h-screen bg-gradient-to-r from-green-300 to-blue-500 pl-6 pt-6 md:pl-16 lg:pl-56">
       <div className="container mx-auto">
         {loading ? (
           <p className="text-center text-white text-xl">Loading...</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
             {news.map((article, index) => (
               <div
                 key={index}
