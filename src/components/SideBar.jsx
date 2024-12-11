@@ -23,9 +23,9 @@ const Sidebar = () => {
         <div
           className={`fixed top-0 left-0 min-h-screen w-56 bg-slate-950 shadow-md transform ${
             isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform lg:translate-x-0 lg:flex`}
+          } transition-transform lg:translate-x-0 lg:flex z-20`}
         >
-          <ul className="flex flex-col justify-center min-h-screen  py-4">
+          <ul className="flex flex-col justify-center min-h-screen py-4">
             <li>
               <Link
                 to="/"
