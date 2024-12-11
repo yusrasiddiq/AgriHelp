@@ -9,7 +9,7 @@ const AgricultureNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url = `agrihelpbackend.up.railway.app`;
+        const url = `https://agrihelpbackend.up.railway.app`;
         const response = await fetch(url);
         const data = await response.json();
 
