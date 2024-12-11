@@ -1,7 +1,7 @@
 export default function HomeText() {
   return (
     <>
-      <div className="flex min-h-[25vh] items-center justify-center bg-yellow-400 font-bold text-gray-900 pt-12  font-mono">
+      <div className="flex min-h-[25vh] items-center justify-center bg-yellow-400 font-bold text-gray-900 pt-20  font-mono">
         <div className="flex flex-col items-center justify-center text-center space-y-12">
           <div className="text-4xl font-bold text-center">
             <span className="tracking-wide"></span> One Stop Solution For{" "}
