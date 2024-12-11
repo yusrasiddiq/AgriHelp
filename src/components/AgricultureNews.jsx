@@ -9,12 +9,13 @@ const AgricultureNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await fetch(
-          `https://newsapi.org/v2/everything?q=agriculture%20india&apiKey=${apiKey}`
-        );
-        const data = await response.json();
-        setNews(data.articles);
-        setLoading(false);
+        const url =
+          "https://newsapi.org/v2/top-headlines?country=in&apiKey=YOUR_API_KEY";
+        const proxy = "https://cors-anywhere.herokuapp.com/";
+
+        fetch(proxy + url)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
       } catch (error) {
         console.error("Error fetching news:", error);
         setLoading(false);
