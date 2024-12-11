@@ -4,25 +4,27 @@ import React, { useState, useEffect } from "react";
 const AgricultureNews = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
-  const apiKey = "1adce1c892844c078ebde9b4c4c89dcf"; // Replace with your NewsAPI key
+  // const apiKey = "1adce1c892844c078ebde9b4c4c89dcf"; // Replace with your NewsAPI key
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const url =
-          "https://newsapi.org/v2/top-headlines?country=in&apiKey=YOUR_API_KEY";
-        const proxy = "https://cors-anywhere.herokuapp.com/";
+        const url = `agrihelpbackend.up.railway.app`;
+        const response = await fetch(url);
+        const data = await response.json();
 
-        fetch(proxy + url)
-          .then((response) => response.json())
-          .then((data) => console.log(data));
+        if (data.articles) {
+          setNews(data.articles); // Update the state with fetched articles
+        }
       } catch (error) {
         console.error("Error fetching news:", error);
-        setLoading(false);
+      } finally {
+        setLoading(false); // Ensure loading is set to false after the fetch
       }
     };
+
     fetchNews();
-  }, [apiKey]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-green-300 to-blue-500 pl-56 pt-6">
