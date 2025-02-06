@@ -1,4 +1,4 @@
-# Minor Project: Agriculture and Weather App
+# Agriculture and Weather App
 
 This web app is a one-stop solution for real-time weather reports, agriculture news, and other related services. It provides a user-friendly interface to check weather updates, agricultural news, and much more.
 
